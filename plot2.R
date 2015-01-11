@@ -1,9 +1,17 @@
 ###
 # Creates "Plot 2" both on the screen and as a PNG file
-#
-# Expects the file "household_power_consumption.txt" to be present in the
-# working directory.
 ### 
+
+# Download and unzip the data if needed
+if (!file.exists("household_power_consumption.txt")) {
+  
+  fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+  fileName <- "exdata-data-household_power_consumption.zip"
+  download.file(fileURL, 
+                destfile = fileName,
+                mode = "wb")
+  unzip(zipfile = fileName, files = "household_power_consumption.txt")
+}
 
 # Loads the data only if needed; it's a lot to load, so let's not waste time
 if (!exists("DataSet")) {
