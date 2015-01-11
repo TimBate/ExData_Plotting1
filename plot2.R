@@ -38,7 +38,7 @@ plot(S$datetime, S$Global_active_power, type = "l",
 # Method as above. 480x480 is the default, but explicitly stated for clarity.
 # Alternative method below.
 ###
-png("plot2.png", width = 480, height = 480)
+png("plot2.png", width = 480, height = 480, bg = "transparent")
 
 plot(S$datetime, S$Global_active_power, type = "l", 
      ylab = "Global Active Power (kilowatts)", xlab = "")
@@ -46,4 +46,5 @@ plot(S$datetime, S$Global_active_power, type = "l",
 dev.off()
 
 # Uncomment for alternative method (copying from screen).
-#dev.copy(png, file = "plot2.png", width = 480, height = 480)
+#dev.copy(png, file = "plot2.png", width = 480, height = 480, 
+#         bg = "transparent")

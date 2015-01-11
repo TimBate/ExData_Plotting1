@@ -43,7 +43,7 @@ legend("topright", col = c("black", "red", "blue"), lty = c(1,1,1),
 # Method as above. 480x480 is the default, but explicitly stated for clarity.
 # Alternative method below.
 ###
-png("plot3.png", width = 480, height = 480)
+png("plot3.png", width = 480, height = 480, bg = "transparent")
 
 plot(S$datetime, S$Sub_metering_1 , type = "l", 
      ylab = "Energy sub metering", xlab = "")
@@ -56,4 +56,5 @@ legend("topright", col = c("black", "red", "blue"), lty = c(1,1,1),
 dev.off()
 
 # Uncomment for alternative method (copying from screen).
-#dev.copy(png, file = "plot3.png", width = 480, height = 480)
+#dev.copy(png, file = "plot3.png", width = 480, height = 480, 
+#         bg = "transparent")

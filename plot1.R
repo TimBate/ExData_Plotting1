@@ -39,7 +39,7 @@ hist(S$Global_active_power, col = "red", main = "Global Active Power",
 # Method as above. 480x480 is the default, but explicitly stated for clarity.
 # Alternative method below.
 ###
-png("plot1.png", width = 480, height = 480)
+png("plot1.png", width = 480, height = 480, bg = "transparent")
 
 hist(S$Global_active_power, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
@@ -47,4 +47,5 @@ hist(S$Global_active_power, col = "red", main = "Global Active Power",
 dev.off()
 
 # Uncomment for alternative method (copying from screen).
-#dev.copy(png, file = "plot1.png", width = 480, height = 480)
+#dev.copy(png, file = "plot1.png", width = 480, height = 480, 
+#         bg = "transparent")

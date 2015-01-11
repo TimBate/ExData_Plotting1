@@ -52,7 +52,7 @@ plot(S$datetime, S$Global_reactive_power, type = "l",
 # Method as above. 480x480 is the default, but explicitly stated for clarity.
 # Alternative method below.
 ###
-png("plot4.png", width = 480, height = 480)
+png("plot4.png", width = 480, height = 480, bg = "transparent")
 
 par(mfrow = c(2,2))
 
@@ -76,4 +76,5 @@ plot(S$datetime, S$Global_reactive_power, type = "l",
 dev.off()
 
 # Uncomment for alternative method (copying from screen).
-#dev.copy(png, file = "plot4.png", width = 480, height = 480)
+#dev.copy(png, file = "plot4.png", width = 480, height = 480, 
+#         bg = "transparent")
