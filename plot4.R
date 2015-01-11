@@ -40,7 +40,8 @@ plot(S$datetime, S$Sub_metering_1 , type = "l",
 points(S$datetime, S$Sub_metering_2, type = "l", col = "red")
 points(S$datetime, S$Sub_metering_3, type = "l", col = "blue")
 legend("topright", col = c("black", "red", "blue"), lty = c(1,1,1), 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       bty = "n")
 
 
 plot(S$datetime, S$Global_reactive_power, type = "l", 
@@ -65,7 +66,8 @@ plot(S$datetime, S$Sub_metering_1 , type = "l",
 points(S$datetime, S$Sub_metering_2, type = "l", col = "red")
 points(S$datetime, S$Sub_metering_3, type = "l", col = "blue")
 legend("topright", col = c("black", "red", "blue"), lty = c(1,1,1), 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       bty = "n")
 
 
 plot(S$datetime, S$Global_reactive_power, type = "l", 
